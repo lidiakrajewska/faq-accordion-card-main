@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7)) no-repeat;
+  background: linear-gradient(#af67e9, #6565e7) no-repeat;
+  color: #1d1e35;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: Min(920px, 85%);
+  padding: 3rem 1.5rem;
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 20px, rgba(0, 0, 0, 0.1) 0px 30px 30px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 20px, rgba(0, 0, 0, 0.1) 0px 30px 30px;
+  border-radius: 25px;
+}
+
+.card--fake {
+  display: none;
+  pointer-events: none;
+}
+
+/* Images */
+.img-wrapper {
+  position: relative;
+  min-height: 10vh;
+}
+
+.shadow-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
+  width: 90%;
+  max-height: 150%;
+}
+
+.main-img {
+  position: absolute;
+  top: -80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 85%;
+  max-height: 300%;
+}
+
+.box-img {
+  display: none;
+}
+
+/* Questions and answers */
+.title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.question-wrapper {
+  padding: 1rem 0;
+  border-bottom: solid 1px #e7e7e9;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.question {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #4a4b5e;
+}
+
+.answer {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #787887;
+  line-height: 1.5;
+}
+
+.active {
+  font-weight: 700;
+  color: #1d1e35;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
+}
+
+.active--arrow {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
+}
+
+.active--answer {
+  display: block;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
+}
+
+/* Desktop view */
+@media screen and (min-width: 1440px) {
+  .card {
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 4rem 6rem 5rem 4rem;
+    overflow: hidden;
+  }
+  .card--fake {
+    display: block;
+    position: absolute;
+    width: Min(920px, 85%);
+    padding: 3rem 1.5rem;
+    z-index: 10;
+    overflow: visible;
+  }
+  .img-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .shadow-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translate(-58%, -32%);
+            transform: translate(-58%, -32%);
+    width: 200%;
+    max-height: 300%;
+  }
+  .main-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+    width: 120%;
+    max-height: 300%;
+  }
+  .box-img {
+    display: inline;
+    position: absolute;
+    top: 0%;
+    left: -10%;
+  }
+  .text-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 1.2rem;
+  }
+  .title {
+    text-align: start;
+    margin-bottom: 1.5rem;
+  }
+  .question-wrapper {
+    padding: 1.1rem 0;
+  }
+  .question {
+    font-size: 0.85rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
