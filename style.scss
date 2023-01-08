@@ -41,16 +41,15 @@ main {
 /* Images */
 .img-wrapper {
   position: relative;
-  min-height: 10vh;
+  min-height: Min(10vh, 120px);
 }
 
 .shadow-img {
   position: absolute;
-  top: 0;
+  top: -70%;
   left: 50%;
-  transform: translate(-50%, -45%);
-  width: 90%;
-  max-height: 150%;
+  transform: translate(-50%, 0%);
+  width: Min(85%, 400px);
 }
 
 .main-img {
@@ -58,8 +57,7 @@ main {
   top: -80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
-  max-height: 300%;
+  width: Min(85%, 400px);
 }
 
 .box-img {
@@ -87,6 +85,7 @@ main {
   font-size: 0.8rem;
   font-weight: 400;
   color: $question-color;
+  transition: all 0.3s ease;
 }
 
 .answer {
@@ -100,17 +99,23 @@ main {
 .active {
   font-weight: 700;
   color: $text-color;
-  transition: all 0.5 ease;
 }
 
 .active--arrow {
   transform: scaleY(-1);
-  transition: all 0.5 ease;
+  transition: all 0.2 ease;
 }
 
 .active--answer {
   display: block;
-  transition: all 0.5 ease;
+  transition: all 0.2 ease;
+}
+
+/* Tablet view */
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 3rem;
+  }
 }
 
 /* Desktop view */
@@ -138,19 +143,19 @@ main {
 
   .shadow-img {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 0;
-    transform: translate(-58%, -32%);
+    transform: translate(-58%, -52%);
     width: 200%;
     max-height: 300%;
   }
 
   .main-img {
     position: absolute;
-    top: 0;
+    top: 50%;
     bottom: 0;
     left: 0;
-    transform: translate(-30%, 0);
+    transform: translate(-30%, -50%);
     width: 120%;
     max-height: 300%;
   }
@@ -176,7 +181,17 @@ main {
     padding: 1.1rem 0;
   }
 
+  .row {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   .question {
     font-size: 0.85rem;
+    &:hover {
+      color: $highlight;
+      cursor: pointer;
+    }
   }
 }

@@ -49,17 +49,16 @@ main {
 /* Images */
 .img-wrapper {
   position: relative;
-  min-height: 10vh;
+  min-height: Min(10vh, 120px);
 }
 
 .shadow-img {
   position: absolute;
-  top: 0;
+  top: -70%;
   left: 50%;
-  -webkit-transform: translate(-50%, -45%);
-          transform: translate(-50%, -45%);
-  width: 90%;
-  max-height: 150%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: Min(85%, 400px);
 }
 
 .main-img {
@@ -68,8 +67,7 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 85%;
-  max-height: 300%;
+  width: Min(85%, 400px);
 }
 
 .box-img {
@@ -103,6 +101,8 @@ main {
   font-size: 0.8rem;
   font-weight: 400;
   color: #4a4b5e;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .answer {
@@ -116,21 +116,26 @@ main {
 .active {
   font-weight: 700;
   color: #1d1e35;
-  -webkit-transition: all 0.5 ease;
-  transition: all 0.5 ease;
 }
 
 .active--arrow {
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
-  -webkit-transition: all 0.5 ease;
-  transition: all 0.5 ease;
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
 }
 
 .active--answer {
   display: block;
-  -webkit-transition: all 0.5 ease;
-  transition: all 0.5 ease;
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
+}
+
+/* Tablet view */
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 3rem;
+  }
 }
 
 /* Desktop view */
@@ -162,20 +167,20 @@ main {
   }
   .shadow-img {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 0;
-    -webkit-transform: translate(-58%, -32%);
-            transform: translate(-58%, -32%);
+    -webkit-transform: translate(-58%, -52%);
+            transform: translate(-58%, -52%);
     width: 200%;
     max-height: 300%;
   }
   .main-img {
     position: absolute;
-    top: 0;
+    top: 50%;
     bottom: 0;
     left: 0;
-    -webkit-transform: translate(-30%, 0);
-            transform: translate(-30%, 0);
+    -webkit-transform: translate(-30%, -50%);
+            transform: translate(-30%, -50%);
     width: 120%;
     max-height: 300%;
   }
@@ -198,8 +203,15 @@ main {
   .question-wrapper {
     padding: 1.1rem 0;
   }
+  .row:hover {
+    cursor: pointer;
+  }
   .question {
     font-size: 0.85rem;
+  }
+  .question:hover {
+    color: #f47c57;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=style.css.map */
