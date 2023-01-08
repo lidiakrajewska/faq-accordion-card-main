@@ -26,12 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop](./images/desktop-screen.png)
+![Mobile](./images/mobile-screen.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/lidiakrajewska/faq-accordion-card-main](https://github.com/lidiakrajewska/faq-accordion-card-main)
+- Live Site URL: [https://lidiakrajewska.github.io/faq-accordion-card-main/](https://lidiakrajewska.github.io/faq-accordion-card-main/)
 
 ## My process
 

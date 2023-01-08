@@ -111,6 +111,15 @@ main {
   transition: all 0.2 ease;
 }
 
+/* Footer */
+.attribution {
+  text-align: center;
+  margin-bottom: 1rem;
+  a {
+    color: $highlight;
+  }
+}
+
 /* Tablet view */
 @media screen and (min-width: 768px) {
   .card {
