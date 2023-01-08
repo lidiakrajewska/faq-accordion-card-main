@@ -23,6 +23,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
+  padding: 9rem 0rem;
 }
 
 .card {
@@ -134,7 +135,7 @@ main {
 /* Footer */
 .attribution {
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 1rem 0rem;
 }
 
 .attribution a {
@@ -143,6 +144,9 @@ main {
 
 /* Tablet view */
 @media screen and (min-width: 768px) {
+  main {
+    padding: 12rem 0rem;
+  }
   .card {
     padding: 3rem;
   }
@@ -150,6 +154,9 @@ main {
 
 /* Desktop view */
 @media screen and (min-width: 1440px) {
+  main {
+    padding: 0rem;
+  }
   .card {
     position: relative;
     -webkit-box-orient: horizontal;
