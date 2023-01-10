@@ -75,6 +75,16 @@ main {
   display: none;
 }
 
+.landscape-img {
+  top: -200%;
+  width: 40%;
+}
+
+.landscape-shadow {
+  top: -190%;
+  width: 40%;
+}
+
 /* Questions and answers */
 .title {
   margin-bottom: 1rem;
@@ -152,8 +162,19 @@ main {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .landscape-img {
+    top: -100%;
+    width: 40%;
+  }
+  .landscape-shadow {
+    top: -90%;
+    width: 40%;
+  }
+}
+
 /* Desktop view */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1300px) {
   main {
     padding: 0rem;
   }

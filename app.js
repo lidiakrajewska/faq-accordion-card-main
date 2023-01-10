@@ -3,7 +3,7 @@ const mainImg = document.querySelector(".main-img");
 const questions = document.querySelectorAll(".question-wrapper");
 
 // Changing the img src based on screen size
-let screenWidth = window.matchMedia("(min-width: 1440px)");
+let screenWidth = window.matchMedia("(min-width: 1300px)");
 adjustImgSrc(screenWidth);
 screenWidth.addEventListener("change", adjustImgSrc);
 
@@ -14,6 +14,21 @@ function adjustImgSrc(screenWidth) {
   } else {
     shadowImg.src = "./images/bg-pattern-mobile.svg";
     mainImg.src = "./images/illustration-woman-online-mobile.svg";
+  }
+}
+
+// Landscape mode on mobile fix
+let orientation = window.matchMedia("(orientation: landscape)");
+adjustImgSize(orientation);
+orientation.addEventListener("change", adjustImgSize);
+
+function adjustImgSize(orientation) {
+  if (orientation.matches) {
+    mainImg.classList.add("landscape-img");
+    shadowImg.classList.add("landscape-shadow");
+  } else {
+    mainImg.classList.remove("landscape-img");
+    shadowImg.classList.remove("landscape-shadow");
   }
 }
 
